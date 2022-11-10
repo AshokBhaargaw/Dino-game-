@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    background-color: rgb(217, 0, 185);
+}
+
+.gameContainer {
+    background-image: url(/data/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    height: 100vh;
+    width: 100vw;
+}
+
+.dino {
+    background-image: url(/data/dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 240px;
+    height: 123px;
+    position: absolute;
+    bottom: 15px;
+    left: 62px;
+}
+
+.obstacle {
+    background-image: url(/data/dragon.png);
+    width: 164px;
+    height: 113px;
+    background-size: cover;
+    position: absolute;
+    bottom: 15px;
+    left: 90vw;
+}
+
+.animateDino {
+    animation: dino 0.6s linear;
+}
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+
+
+.gameOver{
+    visibility: hidden; 
+    position: relative;
+    top: 63px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 53px;
+}
+ 
+#scoreCont{
+    position: absolute;
+    right: 23px;
+    top: 22px;
+    padding: 10px;
+    font-weight: 1000;
+    border: 3px solid black;
+    color: black;
+    background: rgb(232, 232, 232);
+    width: 140px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@keyframes dino {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 384px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        right: 100vh;
+    }
+    100%{
+        left: -10vh;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
